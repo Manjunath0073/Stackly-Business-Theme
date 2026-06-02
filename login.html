@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Business | Strategic Consulting Solutions</title>
+
+    <!-- Fonts -->
+    <!-- Poppins -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <main class="auth">
+
+        <div class="auth__container">
+
+            <!-- =========================
+                LEFT VISUAL PANEL
+            ========================== -->
+
+            <div class="auth__visual">
+
+                <img
+                    src="assets/start-up-project_11zon.webp"
+                    alt="Business Consulting">
+
+                <div class="auth__visual-overlay">
+
+                    <span class="auth__tag">
+                        Welcome Back
+                    </span>
+
+                    <h1>
+                        Continue Building
+                        <span class="gradient-word">
+                            Excellence
+                        </span>
+                    </h1>
+
+                    <p>
+                        Access your consulting dashboard, project insights,
+                        performance reports, and strategic recommendations.
+                    </p>
+
+                    <div class="auth__visual-stats">
+
+                    <div class="visual-stat">
+
+                        <span class="stat-label">
+                            Projects
+                        </span>
+
+                        <h3 class="counter" data-target="500">
+                            0
+                        </h3>
+
+                        <span class="stat-desc">
+                            Successfully Delivered
+                        </span>
+
+                    </div>
+
+                    <div class="visual-stat">
+
+                        <span class="stat-label">
+                            Client Satisfaction
+                        </span>
+
+                        <h3 class="counter"
+                            data-target="98">
+                            0
+                        </h3>
+
+                        <span>
+                            Client Satisfaction
+                        </span>
+
+                    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- =========================
+                RIGHT FORM PANEL
+            ========================== -->
+
+            <div class="auth__form-panel">
+
+                <!-- Logo -->
+
+                <a href="index.html" class="auth__logo">
+
+                    <img
+                        src="assets/logo-stackly.webp"
+                        alt="Stackly Business">
+
+                </a>
+
+                <!-- Header -->
+
+            <div class="auth__header">
+
+                <span class="auth__mini-tag">
+
+                    Welcome Back
+
+                </span>
+
+                <h2>
+
+                    Login To
+                    <span>
+                        Stackly Business
+                    </span>
+
+                </h2>
+
+                <p>
+
+                    Access your consulting dashboard,
+                    project insights and growth reports.
+
+                </p>
+
+            </div>
+
+                <!-- Form -->
+
+                <form
+                    id="loginForm"
+                    class="auth__form">
+
+                    <!-- Role -->
+
+                    <div class="form-group">
+
+                        <label for="role">
+                            Select Role
+                        </label>
+
+                        <select
+                            id="role"
+                            required>
+
+                            <option value="">
+                                Choose Role
+                            </option>
+
+                            <option value="client">
+                                Business Client
+                            </option>
+
+                            <option value="consultant">
+                                Consultant
+                            </option>
+
+                        </select>
+
+                        <small id="roleError" class="error-message"></small>
+
+                    </div>
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required>
+
+                        <small class="error-message"></small>
+
+                    </div>
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="password-field">
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                required>
+
+                            <button
+                                type="button"
+                                id="togglePassword">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+                            
+                        </div>
+
+                    </div>
+
+                    <!-- Options -->
+
+                    <div class="auth__options">
+
+                        <label class="remember-me">
+
+                            <input
+                                type="checkbox">
+
+                            Remember Me
+
+                        </label>
+
+                        <a href="#">
+
+                            Forgot Password?
+
+                        </a>
+
+                    </div>
+
+                    <!-- Login Button -->
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary auth-btn">
+
+                        Sign In
+
+                    </button>
+
+                </form>
+
+                <!-- Divider -->
+
+                <div class="auth-divider">
+
+                    <span>
+                        OR
+                    </span>
+
+                </div>
+
+                <!-- Social Login -->
+
+                <div class="auth-social">
+
+                    <button
+                        type="button"
+                        class="social-btn">
+
+                        Google
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="social-btn">
+
+                        LinkedIn
+
+                    </button>
+
+                </div>
+
+                <!-- Footer -->
+
+                <div class="auth__footer">
+
+                    <p>
+
+                        Don't have an account?
+
+                        <a href="signup.html">
+
+                            Create Account
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+       <!-- <div class="auth-glow auth-glow-1"></div>
+        <div class="auth-glow auth-glow-2"></div>
+    -->
+
+    </main>
+</body>
+<script src="login.js"></script>
+</html>

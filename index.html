@@ -7,7 +7,8 @@
 
     <!-- Fonts -->
     <!-- Poppins -->
-    <!-- Inter -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -16,7 +17,7 @@
     <!-- =========================
          LOADER
     ========================== -->
-    <div class="loader">
+   <!-- <div class="loader">
 
         <div class="loader__content">
 
@@ -28,7 +29,7 @@
 
         </div>
 
-    </div>
+    </div>-->
 
     <!-- =========================
          HEADER
@@ -129,10 +130,11 @@
 
                             <a href="solutions.html" class="btn btn-primary">
                                 Explore Solutions
+                                <span>→</span>
                             </a>
-
                             <a href="contact.html" class="btn btn-secondary">
-                                Schedule Consultation
+                                Book Call
+                                <span>→</span>
                             </a>
 
                         </div>
@@ -145,24 +147,22 @@
 
                             <div class="dashboard-card">
 
-                                <h3>+42%</h3>
-
+                               <h3 class="counter"
+                                    data-target="42"
+                                    data-suffix="%">0</h3>
                                 <span>Revenue Growth</span>
 
                             </div>
 
                             <div class="dashboard-card">
 
-                                <h3>98%</h3>
-
+                                <h3 class="counter" data-target="98" data-suffix="%">0</h3>
                                 <span>Client Satisfaction</span>
 
                             </div>
 
                             <div class="dashboard-card">
-
-                                <h3>35+</h3>
-
+                                <h3 class="counter" data-target="35" data-suffix="+">0</h3>
                                 <span>Industries Served</span>
 
                             </div>
@@ -236,7 +236,13 @@
 
                                         S420 40,
                                         480 20" />
+                                    <circle cx="20" cy="180" r="5" class="chart-dot"></circle>
 
+                                    <circle cx="170" cy="110" r="5" class="chart-dot"></circle>
+
+                                    <circle cx="320" cy="90" r="5" class="chart-dot"></circle>
+
+                                    <circle cx="480" cy="20" r="5" class="chart-dot"></circle>
                                 </svg>
 
                             </div>
@@ -262,77 +268,281 @@
         </section>
 
 
-        <section class="hero-stats">
+        <!-- =========================
+            TRUSTED INDUSTRIES
+        ========================= -->
 
-            <div class="container">
+        <section class="trusted-strip">
 
-                <div class="hero-stats__wrapper">
+            <div class="trusted-strip__top">
 
-                    <div class="hero-stat">
-                        <h3>500+</h3>
-                        <p>Projects Delivered</p>
-                    </div>
+                <span></span>
 
-                    <div class="hero-stat">
-                        <h3>98%</h3>
-                        <p>Client Satisfaction</p>
-                    </div>
+                <div class="trusted-strip__top">
 
-                    <div class="hero-stat">
-                        <h3>35+</h3>
-                        <p>Industries Served</p>
-                    </div>
+                    <p>
+                        Empowering Growth Across Industries
+                    </p>
 
-                    <div class="hero-stat">
-                        <h3>120+</h3>
-                        <p>Experts</p>
-                    </div>
+                </div>
+                <span></span>
+
+            </div>
+
+            <div class="trusted-strip__slider">
+
+                <div class="trusted-strip__track">
+
+                    <div>Digital Transformation</div>
+                    <div>Financial Services</div>
+                    <div>Healthcare</div>
+                    <div>Retail & E-Commerce</div>
+                    <div>Manufacturing</div>
+                    <div>Logistics</div>
+                    <div>Technology</div>
+
+                    <!-- Duplicate for seamless loop -->
+
+                    <div>Digital Transformation</div>
+                    <div>Financial Services</div>
+                    <div>Healthcare</div>
+                    <div>Retail & E-Commerce</div>
+                    <div>Manufacturing</div>
+                    <div>Logistics</div>
+                    <div>Technology</div>
 
                 </div>
 
             </div>
 
         </section>
+       <!-- =========================
+            SOLUTIONS
+        ========================= -->
 
-        <!-- =========================
-             METRICS TICKER
-        ========================== -->
-        <section class="metrics-ticker">
-
-            <div class="ticker-track">
-
-                <div class="ticker-item">500+ Projects Delivered</div>
-                <div class="ticker-item">98% Client Satisfaction</div>
-                <div class="ticker-item">35+ Industries Served</div>
-                <div class="ticker-item">120+ Experts</div>
-                <div class="ticker-item">15+ Years Experience</div>
-
-            </div>
-
-        </section>
-
-        <!-- =========================
-             SOLUTIONS
-        ========================== -->
-        <section class="solutions section">
+        <section class="solutions">
 
             <div class="container">
 
                 <div class="section-heading">
-                    <span class="section-tag">Solutions</span>
-                    <h2>Business Solutions That Drive Results</h2>
-                    <p>Placeholder content.</p>
+
+                    <span class="section-tag">
+                        Our Solutions
+                    </span>
+
+                    <h2>
+                        Business Solutions That Drive Measurable Results
+                    </h2>
+
+                    <p>
+                        We combine strategic thinking, industry expertise,
+                        and technology-driven execution to help organizations
+                        accelerate growth and create long-term value.
+                    </p>
+
                 </div>
 
                 <div class="solutions__grid">
 
-                    <article class="solution-card"></article>
-                    <article class="solution-card"></article>
-                    <article class="solution-card"></article>
-                    <article class="solution-card"></article>
-                    <article class="solution-card"></article>
-                    <article class="solution-card"></article>
+                    <!-- Featured Card -->
 
+                    <article class="solution-card solution-card--featured">
+
+                        <div class="solution-card__content">
+
+                            <span class="solution-card__label">
+                                Featured Solution
+                            </span>
+
+                            <h3>
+                                Strategic Growth & Transformation
+                            </h3>
+
+                            <p>
+                                We partner with business leaders to build scalable
+                                growth strategies, improve operational performance,
+                                and navigate complex transformation initiatives.
+                            </p>
+
+                            <ul class="solution-list">
+
+                                <li>Market Expansion Strategy</li>
+                                <li>Business Process Optimization</li>
+                                <li>Digital Transformation Roadmaps</li>
+                                <li>Performance Management</li>
+
+                            </ul>
+
+                            <a href="#" class="solution-link">
+                                Explore Solution →
+                            </a>
+
+                        </div>
+
+                        <div class="solution-card__image">
+
+                            <img src="assets/images/annie-spratt-QckxruozjRg-unsplash.webp"
+                                alt="Strategic Consulting">
+
+                        </div>
+
+                    </article>
+
+                    <!-- Card 1 -->
+
+                    <article class="solution-card">
+
+                        <div class="solution-icon">
+                            📈
+                        </div>
+
+                        <h3>
+                            Business Strategy
+                        </h3>
+
+                        <p>
+                            Growth planning, competitive analysis,
+                            and long-term business roadmaps.
+                        </p>
+
+                        <a href="#">
+                            Learn More →
+                        </a>
+
+                    </article>
+
+                    <!-- Card 2 -->
+
+                    <article class="solution-card">
+
+                        <div class="solution-icon">
+                            💻
+                        </div>
+
+                        <h3>
+                            Digital Transformation
+                        </h3>
+
+                        <p>
+                            Modernizing systems, processes,
+                            and customer experiences.
+                        </p>
+
+                        <a href="#">
+                            Learn More →
+                        </a>
+
+                    </article>
+
+                    <!-- Card 3 -->
+
+                    <article class="solution-card">
+
+                        <div class="solution-icon">
+                            ⚙️
+                        </div>
+
+                        <h3>
+                            Operations Excellence
+                        </h3>
+
+                        <p>
+                            Improving efficiency, productivity,
+                            and organizational performance.
+                        </p>
+
+                        <a href="#">
+                            Learn More →
+                        </a>
+
+                    </article>
+
+                    <!-- Card 4 -->
+
+                    <article class="solution-card">
+
+                        <div class="solution-icon">
+                            📊
+                        </div>
+
+                        <h3>
+                            Data & Analytics
+                        </h3>
+
+                        <p>
+                            Turning business data into actionable
+                            insights and measurable outcomes.
+                        </p>
+
+                        <a href="#">
+                            Learn More →
+                        </a>
+
+                    </article>
+
+                    <!-- Results Card -->
+
+                    <article class="solution-showcase">
+
+                        <div class="showcase-content">
+
+                            <span class="showcase-tag">
+                                Client Success
+                            </span>
+
+                            <h3>
+                                Driving Transformation Across Industries
+                            </h3>
+
+                            <p>
+                                Our consulting framework has helped organizations
+                                increase profitability, streamline operations,
+                                and accelerate digital adoption.
+                            </p>
+
+                        </div>
+
+                        <div class="showcase-cards">
+
+                            <div class="showcase-stat">
+
+                                <h4 class="counter"
+                                    data-target="42"
+                                    data-suffix="%">
+                                    0
+                                </h4>
+
+                                <span>Revenue Growth</span>
+
+                            </div>
+
+                            <div class="showcase-stat">
+
+                                <h4 class="counter"
+                                    data-target="98"
+                                    data-suffix="%">
+                                    0
+                                </h4>
+
+                                <span>Client Retention</span>
+
+                            </div>
+
+                            <div class="showcase-stat">
+
+                                <h4 class="counter"
+                                    data-target="500"
+                                    data-suffix="+">
+                                    0
+                                </h4>
+
+                                <span>Projects Delivered</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
                 </div>
 
             </div>
@@ -342,31 +552,124 @@
         <!-- =========================
              WHY CHOOSE US
         ========================== -->
-        <section class="why-us section">
+        <section class="why-us">
 
             <div class="container">
 
                 <div class="section-heading">
-                    <span class="section-tag">Why Choose Us</span>
-                    <h2>Delivering Measurable Business Growth</h2>
+
+                    <span class="section-tag">
+                        Why Choose Us
+                    </span>
+
+                    <h2>
+                        Delivering Measurable Business Growth
+                    </h2>
+
+                    <p>
+                        We help organizations achieve sustainable growth through
+                        strategy, innovation, and operational excellence.
+                    </p>
+
                 </div>
 
                 <div class="why-us__content">
 
-                    <div class="why-us__features">
+                    <!-- Left Side -->
 
-                        <div class="feature-card"></div>
-                        <div class="feature-card"></div>
-                        <div class="feature-card"></div>
+                    <div class="why-us__visual">
+
+                        <img
+                            src="assets/images/annie-spratt-QckxruozjRg-unsplash.webp"
+                            alt="Business Consulting">
+
+                        <div class="floating-card floating-card--top">
+
+                            <h4>98%</h4>
+                            <span>Client Satisfaction</span>
+
+                        </div>
+
+                        <div class="floating-card floating-card--bottom">
+
+                            <h4>500+</h4>
+                            <span>Projects Delivered</span>
+
+                        </div>
+
+                        <div class="experience-badge">
+
+                            <h3>15+</h3>
+
+                            <span>
+                                Years Of
+                                Experience
+                            </span>
+
+                        </div>
 
                     </div>
 
-                    <div class="why-us__stats">
+                    <!-- Right Side -->
 
-                        <div class="stat-card"></div>
-                        <div class="stat-card"></div>
-                        <div class="stat-card"></div>
-                        <div class="stat-card"></div>
+                    <div class="why-us__features">
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>Growth-Focused Strategy</h3>
+
+                                <p>
+                                    Customized business roadmaps aligned
+                                    with long-term objectives.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>Industry Expertise</h3>
+
+                                <p>
+                                    Deep experience across finance,
+                                    healthcare, technology and retail.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>Execution Excellence</h3>
+
+                                <p>
+                                    Strategies backed by practical
+                                    implementation and measurable outcomes.
+                                </p>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -390,12 +693,131 @@
 
                 <div class="industries__grid">
 
-                    <div class="industry-card"></div>
-                    <div class="industry-card"></div>
-                    <div class="industry-card"></div>
-                    <div class="industry-card"></div>
-                    <div class="industry-card"></div>
-                    <div class="industry-card"></div>
+                    <article class="industry-card">
+
+                        <img
+                            src="assets/images/fatemeh-rezvani-MnPWB-ybjHQ-unsplash_11zon.webp"
+                            alt="Financial Services">
+
+                        <div class="industry-card__overlay">
+
+                            <span>01</span>
+
+                            <h3>Financial Services</h3>
+
+                            <p>
+                                Digital banking, risk management,
+                                compliance and business growth.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="industry-card">
+
+                        <img
+                            src="assets/images/piron-guillaume-U4FyCp3-KzY-unsplash_11zon.webp"
+                            alt="Healthcare">
+
+                        <div class="industry-card__overlay">
+
+                            <span>02</span>
+
+                            <h3>Healthcare</h3>
+
+                            <p>
+                                Healthcare transformation,
+                                patient experience and operations.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="industry-card">
+
+                        <img
+                            src="assets/images/luke-chesser-JKUTrJ4vK00-unsplash_11zon.webp"
+                            alt="Retail">
+
+                        <div class="industry-card__overlay">
+
+                            <span>03</span>
+
+                            <h3>Retail & E-Commerce</h3>
+
+                            <p>
+                                Omnichannel growth,
+                                customer experience and analytics.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="industry-card">
+
+                        <img
+                            src="assets/images/homa-appliances-sz1CHL7Pky0-unsplash_11zon.webp"
+                            alt="Manufacturing">
+
+                        <div class="industry-card__overlay">
+
+                            <span>04</span>
+
+                            <h3>Manufacturing</h3>
+
+                            <p>
+                                Process optimization,
+                                supply chain and efficiency.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="industry-card">
+
+                        <img
+                            src="assets/images/chuttersnap-BNBA1h-NgdY-unsplash_11zon_11zon.webp"
+                            alt="Logistics">
+
+                        <div class="industry-card__overlay">
+
+                            <span>05</span>
+
+                            <h3>Logistics</h3>
+
+                            <p>
+                                Smart logistics,
+                                transportation and fulfillment.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="industry-card">
+
+                        <img
+                            src="assets/images/austin-distel-mpN7xjKQ_Ns-unsplash_11zon_11zon.webp"
+                            alt="Technology">
+
+                        <div class="industry-card__overlay">
+
+                            <span>06</span>
+
+                            <h3>Technology</h3>
+
+                            <p>
+                                Product innovation,
+                                AI adoption and digital strategy.
+                            </p>
+
+                        </div>
+
+                    </article>
 
                 </div>
 
@@ -406,20 +828,113 @@
         <!-- =========================
              CASE STUDIES
         ========================== -->
-        <section class="case-studies section">
+        <section class="case-studies">
 
             <div class="container">
 
                 <div class="section-heading">
-                    <span class="section-tag">Success Stories</span>
-                    <h2>Real Results For Real Businesses</h2>
+
+                    <span class="section-tag">
+                        Success Stories
+                    </span>
+
+                    <h2>
+                        Real Results For Real Businesses
+                    </h2>
+
+                    <p>
+                        Explore how we helped organizations overcome
+                        challenges, accelerate growth, and create measurable value.
+                    </p>
+
                 </div>
 
                 <div class="case-studies__grid">
 
-                    <article class="case-study-card"></article>
-                    <article class="case-study-card"></article>
-                    <article class="case-study-card"></article>
+                    <!-- Featured Case Study -->
+
+                    <article class="case-study-card featured-case">
+
+                        <div class="case-study-image">
+
+                            <img
+                                src="assets/images/campaign-creators-pypeCEaJeZY-unsplash_11zon (1).webp"
+                                alt="Financial Services">
+
+                        </div>
+
+                        <div class="case-study-content">
+
+                            <span class="case-category">
+                                Financial Services
+                            </span>
+
+                            <h3>
+                                Increased Revenue Growth By 42%
+                            </h3>
+
+                            <p>
+                                Implemented a data-driven transformation strategy
+                                that improved operational efficiency and customer acquisition.
+                            </p>
+
+                            <div class="case-metrics">
+
+                                <div>
+                                    <strong>42%</strong>
+                                    <span>Revenue Growth</span>
+                                </div>
+
+                                <div>
+                                    <strong>28%</strong>
+                                    <span>Cost Reduction</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Case Study 2 -->
+
+                    <article class="case-study-card">
+
+                        <img
+                            src="assets/images/age-cymru-GStFfDrOygo-unsplash_11zon_11zon.webp"
+                            alt="Healthcare">
+
+                        <div class="case-overlay">
+
+                            <span>Healthcare</span>
+
+                            <h3>
+                                Improved Patient Experience By 65%
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Case Study 3 -->
+
+                    <article class="case-study-card">
+
+                        <img
+                            src="assets/images/blake-wisz-tE6th1h6Bfk-unsplash_11zon_11zon.webp"
+                            alt="Retail">
+
+                        <div class="case-overlay">
+
+                            <span>Retail & E-Commerce</span>
+
+                            <h3>
+                                Boosted Online Sales By 3.2X
+                            </h3>
+
+                        </div>
+
+                    </article>
 
                 </div>
 
@@ -441,11 +956,84 @@
 
                 <div class="process__timeline">
 
-                    <div class="process-step"></div>
-                    <div class="process-step"></div>
-                    <div class="process-step"></div>
-                    <div class="process-step"></div>
-                    <div class="process-step"></div>
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-progress"></div>
+
+                    <div class="process-step">
+
+                        <div class="step-circle">
+                            01
+                        </div>
+
+                        <h3>Discover</h3>
+
+                        <p>
+                            Understanding business goals,
+                            challenges and opportunities.
+                        </p>
+
+                    </div>
+
+                    <div class="process-step">
+
+                        <div class="step-circle">
+                            02
+                        </div>
+
+                        <h3>Strategy</h3>
+
+                        <p>
+                            Building actionable plans
+                            and transformation roadmaps.
+                        </p>
+
+                    </div>
+
+                    <div class="process-step">
+
+                        <div class="step-circle">
+                            03
+                        </div>
+
+                        <h3>Execute</h3>
+
+                        <p>
+                            Implementing solutions
+                            and driving adoption.
+                        </p>
+
+                    </div>
+
+                    <div class="process-step">
+
+                        <div class="step-circle">
+                            04
+                        </div>
+
+                        <h3>Optimize</h3>
+
+                        <p>
+                            Measuring outcomes
+                            and improving efficiency.
+                        </p>
+
+                    </div>
+
+                    <div class="process-step">
+
+                        <div class="step-circle">
+                            05
+                        </div>
+
+                        <h3>Scale</h3>
+
+                        <p>
+                            Expanding success
+                            across the organization.
+                        </p>
+
+                    </div>
 
                 </div>
 
@@ -465,13 +1053,101 @@
                     <h2>What Our Clients Say</h2>
                 </div>
 
-                <div class="testimonials__grid">
+                <article class="testimonial-card featured">
 
-                    <article class="testimonial-card"></article>
-                    <article class="testimonial-card"></article>
-                    <article class="testimonial-card"></article>
+                    <div class="testimonial-rating">
 
-                </div>
+                        ★★★★★
+
+                    </div>
+
+                    <p class="testimonial-text">
+
+                        Stackly Business transformed our operations and
+                        helped us achieve significant growth within
+                        the first year of engagement.
+
+                    </p>
+
+                    <div class="testimonial-client">
+
+                        <img
+                            src="assets/person/flipclip-marketing-Tj8ccy1J0CY-unsplash_11zon.webp"
+                            alt="Client">
+
+                        <div>
+
+                            <h4>Michael Anderson</h4>
+
+                            <span>CEO, FinEdge Solutions</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article class="testimonial-card">
+
+                    <div class="testimonial-rating">
+                        ★★★★★
+                    </div>
+
+                    <p class="testimonial-text">
+
+                        Their strategic insights helped us improve
+                        customer acquisition and operational efficiency.
+
+                    </p>
+
+                    <div class="testimonial-client">
+
+                        <img
+                            src="assets/person/humberto-chavez-F_CnS-8NlZQ-unsplash (1)_11zon.webp"
+                            alt="Client">
+
+                        <div>
+
+                            <h4>Sarah Johnson</h4>
+
+                            <span>Director, HealthSync</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article class="testimonial-card">
+
+                    <div class="testimonial-rating">
+                        ★★★★★
+                    </div>
+
+                    <p class="testimonial-text">
+
+                        Outstanding consulting support with measurable
+                        business outcomes and long-term impact.
+
+                    </p>
+
+                    <div class="testimonial-client">
+
+                        <img
+                            src="assets/person/ratul-puri-zLx710peU_k-unsplash_11zon.webp"
+                            alt="Client">
+
+                        <div>
+
+                            <h4>David Williams</h4>
+
+                            <span>VP Operations, RetailPro</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
 
             </div>
 
@@ -491,7 +1167,9 @@
                     </h2>
 
                     <p>
-                        Placeholder content.
+                    Transform your business with strategic consulting,
+                    digital innovation, and measurable growth solutions
+                    tailored to your organization.
                     </p>
 
                     <div class="cta__buttons">
@@ -505,6 +1183,8 @@
                         </a>
 
                     </div>
+                    <div class="cta-shape cta-shape-1"></div>
+                    <div class="cta-shape cta-shape-2"></div>
 
                 </div>
 
@@ -517,31 +1197,200 @@
     <!-- =========================
          FOOTER
     ========================== -->
-    <footer class="footer">
+<footer class="footer">
 
-        <div class="container">
+    <div class="container">
 
-            <div class="footer__top">
+        <div class="footer__top">
 
-                <div class="footer__column"></div>
-                <div class="footer__column"></div>
-                <div class="footer__column"></div>
-                <div class="footer__column"></div>
+            <!-- Column 1 -->
 
-            </div>
+            <div class="footer__column">
 
-            <div class="footer__bottom">
-                <p>
-                    © 2026 Stackly Business. All Rights Reserved.
+                <a href="index.html" class="footer__logo">
+
+                    <img
+                        src="assets/logo-stackly.webp"
+                        alt="Stackly Business">
+
+                </a>
+
+                <p class="footer__about">
+
+                    Empowering organizations through strategic consulting,
+                    digital transformation, and business growth solutions.
+
                 </p>
+                <div class="footer-social">
+
+                    <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                </div>
+
             </div>
+
+            <!-- Column 2 -->
+
+            <div class="footer__column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="solutions.html">
+                            Solutions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="industries.html">
+                            Industries
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Column 3 -->
+
+            <div class="footer__column">
+
+                <h3>
+                    Solutions
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            Business Strategy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Digital Transformation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Operations Excellence
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Data & Analytics
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer__column">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <ul class="footer-contact">
+
+                    <li>
+
+                        <i class="fas fa-location-dot"></i>
+
+                        <span>
+                            Chennai, Tamil Nadu, India
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        <i class="fas fa-envelope"></i>
+
+                        <a href="mailto:hello@stacklybusiness.com">
+                            hello@stacklybusiness.com
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <i class="fas fa-phone"></i>
+
+                        <a href="tel:+919876543210">
+                            +91 98765 43210
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <i class="fas fa-clock"></i>
+
+                        <span>
+                            Mon - Fri : 9:00 AM - 6:00 PM
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer__bottom">
+
+            <p>
+                © 2026 Stackly Business.
+                All Rights Reserved.
+            </p>
 
         </div>
 
-    </footer>
+    </div>
 
-    <!-- GSAP -->
-    <!-- AOS -->
+</footer>
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="script.js"></script>
 </body>

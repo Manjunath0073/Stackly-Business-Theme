@@ -92,8 +92,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Animate dashboard after buttons
     setTimeout(() => {
+
         document.querySelector(".hero__dashboard").style.opacity = 1;
+
         document.querySelector(".hero__dashboard").style.transform = "translateY(0)";
+
+        animateCounters();
+
     }, 1200);
 
     // Animate stats after dashboard
@@ -121,4 +126,97 @@ function rotateWord() {
 
 // Change word every 3 seconds
 setInterval(rotateWord, 3000);
+
+function animateCounters(){
+
+    const counters =
+    document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+
+        const target =
+        Number(counter.dataset.target);
+
+        let current = 0;
+
+        const duration = 2000;
+
+        const step =
+        target / (duration / 16);
+
+        function update(){
+
+            current += step;
+
+            if(current < target){
+
+                const suffix =
+                counter.dataset.suffix || '';
+
+                counter.textContent =
+                Math.floor(current) + suffix;
+
+                requestAnimationFrame(update);
+
+            }else{
+
+                counter.textContent =
+                target + suffix;
+
+            }
+
+        }
+
+        update();
+
+    });
+
+}
+
+const processSection =
+document.querySelector('.process');
+
+const progressLine =
+document.querySelector('.timeline-progress');
+
+const steps =
+document.querySelectorAll('.process-step');
+
+window.addEventListener('scroll', () => {
+
+    const trigger =
+    processSection.getBoundingClientRect().top;
+
+    const windowHeight =
+    window.innerHeight;
+
+    if(trigger < windowHeight * 0.7){
+
+        if(window.innerWidth <= 992){
+
+            progressLine.style.width = "2px";
+
+            progressLine.style.height = "100%";
+
+        }else{
+
+            progressLine.style.height = "4px";
+
+            progressLine.style.width = "80%";
+
+        }
+
+        steps.forEach((step,index)=>{
+
+            setTimeout(()=>{
+
+                step.classList.add('active');
+
+            }, index * 300);
+
+        });
+
+    }
+
+});
 
