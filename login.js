@@ -203,17 +203,30 @@ if(loginForm){
         const role =
         document.getElementById("role").value;
 
+        const username =
+        document.getElementById("email").value;
+
+        localStorage.setItem(
+            "loggedInUser",
+            username
+        );
+
+        localStorage.setItem(
+            "loggedInRole",
+            role
+        );
+
         if(role === "client"){
 
             window.location.href =
-            "client.html";
+            "dashboard.html";
 
         }
 
         else if(role === "consultant"){
 
             window.location.href =
-            "consultant.html";
+            "dashboard.html";
 
         }
 

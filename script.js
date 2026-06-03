@@ -1,15 +1,19 @@
 window.addEventListener('load', () => {
 
-    const loader = document.querySelector('.loader');
+    const loader =
+    document.querySelector('.loader');
 
-    setTimeout(() => {
+    if(loader){
 
-        loader.classList.add('hide');
+        setTimeout(() => {
 
-    }, 2500);
+            loader.classList.add('hide');
+
+        },2500);
+
+    }
 
 });
-
 const currentPage =
 window.location.pathname.split("/").pop();
 
@@ -44,15 +48,19 @@ document.querySelector(".mobile-toggle");
 const mobileMenu =
 document.querySelector(".mobile-menu");
 
-mobileToggle.addEventListener("click", () => {
+if(mobileToggle && mobileMenu){
 
-    mobileToggle.classList.toggle("active");
+    mobileToggle.addEventListener("click", () => {
 
-    mobileMenu.classList.toggle("active");
+        mobileToggle.classList.toggle("active");
 
-    document.body.classList.toggle("menu-open");
+        mobileMenu.classList.toggle("active");
 
-});
+        document.body.classList.toggle("menu-open");
+
+    });
+
+}
 
 document
 .querySelectorAll(".mobile-menu__nav a")
@@ -68,9 +76,14 @@ document
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Animate badge
-    document.querySelector(".hero__badge").style.opacity = 1;
-    document.querySelector(".hero__badge").style.transform = "translateY(0)";
+
+    const heroBadge =
+    document.querySelector(".hero__badge");
+
+    if(!heroBadge) return;
+
+    heroBadge.style.opacity = 1;
+    heroBadge.style.transform = "translateY(0)";
 
     // Animate title after badge
     setTimeout(() => {
@@ -93,18 +106,37 @@ document.addEventListener("DOMContentLoaded", () => {
     // Animate dashboard after buttons
     setTimeout(() => {
 
-        document.querySelector(".hero__dashboard").style.opacity = 1;
+        const dashboard =
+        document.querySelector(".hero__dashboard");
 
-        document.querySelector(".hero__dashboard").style.transform = "translateY(0)";
+        if(dashboard){
 
-        animateCounters();
+            dashboard.style.opacity = 1;
+
+            dashboard.style.transform =
+            "translateY(0)";
+
+            animateCounters();
+
+        }
 
     }, 1200);
 
     // Animate stats after dashboard
     setTimeout(() => {
-        document.querySelector(".hero-stats__wrapper").style.opacity = 1;
-        document.querySelector(".hero-stats__wrapper").style.transform = "translateY(0)";
+
+        const statsWrapper =
+        document.querySelector(".hero-stats__wrapper");
+
+        if(statsWrapper){
+
+            statsWrapper.style.opacity = 1;
+
+            statsWrapper.style.transform =
+            "translateY(0)";
+
+        }
+
     }, 1500);
 });
 
@@ -112,20 +144,37 @@ const words = ["Future-Ready", "Data-Driven", "Sustainable", "Innovative"];
 let currentWordIndex = 0;
 
 function rotateWord() {
-    const wordElement = document.querySelector(".dynamic-word");
+
+    const wordElement =
+    document.querySelector(".dynamic-word");
+
+    if(!wordElement) return;
+
     wordElement.style.opacity = 0;
     wordElement.style.transform = "translateY(10px)";
 
     setTimeout(() => {
-        currentWordIndex = (currentWordIndex + 1) % words.length;
-        wordElement.textContent = words[currentWordIndex];
+
+        currentWordIndex =
+        (currentWordIndex + 1) % words.length;
+
+        wordElement.textContent =
+        words[currentWordIndex];
+
         wordElement.style.opacity = 1;
-        wordElement.style.transform = "translateY(0)";
+        wordElement.style.transform =
+        "translateY(0)";
+
     }, 500);
+
 }
 
 // Change word every 3 seconds
-setInterval(rotateWord, 3000);
+if(document.querySelector(".dynamic-word")){
+
+    setInterval(rotateWord, 3000);
+
+}
 
 function animateCounters(){
 
@@ -144,14 +193,14 @@ function animateCounters(){
         const step =
         target / (duration / 16);
 
+        const suffix =
+        counter.dataset.suffix || '';
+
         function update(){
 
             current += step;
 
             if(current < target){
-
-                const suffix =
-                counter.dataset.suffix || '';
 
                 counter.textContent =
                 Math.floor(current) + suffix;
@@ -182,41 +231,48 @@ document.querySelector('.timeline-progress');
 const steps =
 document.querySelectorAll('.process-step');
 
-window.addEventListener('scroll', () => {
+if(
+    processSection &&
+    progressLine &&
+    steps.length
+){
 
-    const trigger =
-    processSection.getBoundingClientRect().top;
+    window.addEventListener('scroll', () => {
 
-    const windowHeight =
-    window.innerHeight;
+        const trigger =
+        processSection.getBoundingClientRect().top;
 
-    if(trigger < windowHeight * 0.7){
+        const windowHeight =
+        window.innerHeight;
 
-        if(window.innerWidth <= 992){
+        if(trigger < windowHeight * 0.7){
 
-            progressLine.style.width = "2px";
+            if(window.innerWidth <= 992){
 
-            progressLine.style.height = "100%";
+                progressLine.style.width = "2px";
 
-        }else{
+                progressLine.style.height = "100%";
 
-            progressLine.style.height = "4px";
+            }else{
 
-            progressLine.style.width = "80%";
+                progressLine.style.height = "4px";
+
+                progressLine.style.width = "80%";
+
+            }
+
+            steps.forEach((step,index)=>{
+
+                setTimeout(()=>{
+
+                    step.classList.add('active');
+
+                },index * 300);
+
+            });
 
         }
 
-        steps.forEach((step,index)=>{
+    });
 
-            setTimeout(()=>{
-
-                step.classList.add('active');
-
-            }, index * 300);
-
-        });
-
-    }
-
-});
-
+}

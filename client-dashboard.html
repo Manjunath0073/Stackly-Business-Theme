@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Business | Strategic Consulting Solutions</title>
+
+    <!-- Fonts -->
+     <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="client-dashboard.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+                <a href="index.html" class="logo">
+                    <img src="assets/logo-stackly.webp" alt="Stackly Business">
+                </a>
+
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a
+                href="#"
+                class="menu-item active"
+                data-section="overview">
+
+                Overview
+
+            </a>
+
+            <a
+                href="#"
+                class="menu-item"
+                data-section="analytics">
+
+                My projects
+
+            </a>
+
+            <a
+                href="#"
+                class="menu-item"
+                data-section="projects">
+
+                Documents
+
+            </a>
+
+            <a
+                href="#"
+                class="menu-item"
+                data-section="profile">
+
+                Profile
+
+            </a>
+
+        </nav>
+
+        <button
+            class="logout-btn">
+
+            Logout
+
+        </button>
+
+    </aside>
+    <div class="sidebar-overlay"></div>
+
+    <main class="dashboard-content">
+        <button class="mobile-menu-btn">
+
+                ☰
+
+            </button>
+        <header class="dashboard-header">
+            
+
+            <div>
+
+                <h1 class="dashboard-title">
+
+                    Welcome Back
+
+                </h1>
+
+                <p class="dashboard-subtitle">
+
+
+                    Here's what's happening
+                    across your business today.
+
+                </p>
+
+            </div>
+
+            <div class="dashboard-role">
+
+                Client
+
+            </div>
+
+        </header>
+
+        <section id="overview-section">
+
+            <div class="kpi-grid">
+
+               <div class="kpi-card">
+                    <span>Active Projects</span>
+                    <h3 class="counter" data-target="3">0</h3>
+                    <p>Currently running</p>
+                </div>
+
+                <div class="kpi-card">
+                    <span>Open Requests</span>
+                    <h3 class="counter" data-target="12">0</h3>
+                    <p>Awaiting response</p>
+                </div>
+
+                <div class="kpi-card">
+                    <span>Meetings</span>
+                    <h3 class="counter" data-target="24">0</h3>
+                    <p>Completed sessions</p>
+                </div>
+
+                <div class="kpi-card">
+                    <span>Completion Rate</span>
+                    <h3 class="counter" data-target="92">0</h3>
+                    <p>Project success rate</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-grid">
+
+                <div class="chart-card">
+
+                    <div class="chart-header">
+
+                        <div>
+
+                            <h3>
+
+                                Project Progress Overview
+
+                            </h3>
+
+                            <p>
+
+                                Track the overll progress of 
+                                your ongong projects.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <canvas id="overviewChart"></canvas>
+
+                </div>
+
+                <div class="activity-card">
+
+                    <h3>
+
+                        Recent Activities
+
+                    </h3>
+
+                    <ul>
+
+                    <li>
+                    Project milestone approved
+                    </li>
+
+                    <li>
+                    Consultant uploaded report
+                    </li>
+
+                    <li>
+                    Review meeting scheduled
+                    </li>
+
+                    <li>
+                    Requirements updated
+                    </li>
+
+                    <li>
+                    Monthly progress report received
+                    </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="quick-stats">
+
+                <div class="stat-item">
+
+                    <h4>98%</h4>
+
+                    <p>Client Satisfaction</p>
+
+                </div>
+
+                <div class="stat-item">
+
+                    <h4>24/7</h4>
+
+                    <p>Support Coverage</p>
+
+                </div>
+
+                <div class="stat-item">
+
+                    <h4>350+</h4>
+
+                    <p>Consultations</p>
+
+                </div>
+
+                <div class="stat-item">
+
+                    <h4>15+</h4>
+
+                    <p>Industries Served</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section
+            id="analytics-section"
+            class="dashboard-section hidden">
+
+            <div class="section-header">
+
+                <h2>
+
+                    Project Documents
+
+                </h2>
+
+                <p>
+
+                    Access contracts, reports,
+                    proposals and project files.
+
+                </p>
+
+            </div>
+
+            <div class="documents-grid">
+
+                <div class="document-card">
+
+                    <div class="document-icon">
+
+                        📄
+
+                    </div>
+
+                    <h3>
+
+                        Project Proposal
+
+                    </h3>
+
+                    <p>
+
+                        Initial project scope and
+                        implementation plan.
+
+                    </p>
+
+                    <button class="doc-btn">
+
+                        Download
+
+                    </button>
+
+                </div>
+
+                <div class="document-card">
+
+                    <div class="document-icon">
+
+                        📊
+
+                    </div>
+
+                    <h3>
+
+                        Monthly Report
+
+                    </h3>
+
+                    <p>
+
+                        Progress, milestones and
+                        performance metrics.
+
+                    </p>
+
+                    <button class="doc-btn">
+
+                        Download
+
+                    </button>
+
+                </div>
+
+                <div class="document-card">
+
+                    <div class="document-icon">
+
+                        📝
+
+                    </div>
+
+                    <h3>
+
+                        Contract Agreement
+
+                    </h3>
+
+                    <p>
+
+                        Signed service agreement
+                        and project terms.
+
+                    </p>
+
+                    <button class="doc-btn">
+
+                        Download
+
+                    </button>
+
+                </div>
+
+                <div class="document-card">
+
+                    <div class="document-icon">
+
+                        📂
+
+                    </div>
+
+                    <h3>
+
+                        Meeting Notes
+
+                    </h3>
+
+                    <p>
+
+                        Discussion summaries and
+                        action items.
+
+                    </p>
+
+                    <button class="doc-btn">
+
+                        Download
+
+                    </button>
+
+                </div>
+
+                <div class="document-card">
+
+                    <div class="document-icon">
+
+                        💰
+
+                    </div>
+
+                    <h3>
+
+                        Invoice History
+
+                    </h3>
+
+                    <p>
+
+                        Billing records and
+                        payment information.
+
+                    </p>
+
+                    <button class="doc-btn">
+
+                        Download
+
+                    </button>
+
+                </div>
+
+                <div class="document-card">
+
+                    <div class="document-icon">
+
+                        📈
+
+                    </div>
+
+                    <h3>
+
+                        Final Report
+
+                    </h3>
+
+                    <p>
+
+                        Project completion summary
+                        and recommendations.
+
+                    </p>
+
+                    <button class="doc-btn">
+
+                        Download
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section
+            id="projects-section"
+            class="dashboard-section hidden">
+
+            <div class="section-header">
+
+                <h2>
+
+                    My Projects
+
+                </h2>
+
+                <p>
+
+                    Monitor progress, milestones
+                    and project health in real time.
+
+                </p>
+
+            </div>
+
+            <div class="project-grid">
+
+                <div class="project-card">
+
+                    <div class="project-top">
+
+                        <h3>
+
+                            Digital Transformation
+
+                        </h3>
+
+                        <span class="status-badge">
+
+                            In Progress
+
+                        </span>
+
+                    </div>
+
+                    <p>
+
+                        Consultant:
+                        Sarah Johnson
+
+                    </p>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            style="width:80%">
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-footer">
+
+                        <span>
+
+                            80% Complete
+
+                        </span>
+
+                        <span>
+
+                            Due: Jun 2026
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="project-card">
+
+                    <div class="project-top">
+
+                        <h3>
+
+                            Analytics Platform
+
+                        </h3>
+
+                        <span class="status-badge">
+
+                            Active
+
+                        </span>
+
+                    </div>
+
+                    <p>
+
+                        Consultant:
+                        Michael Ross
+
+                    </p>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            style="width:65%">
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-footer">
+
+                        <span>
+
+                            65% Complete
+
+                        </span>
+
+                        <span>
+
+                            Due: Aug 2026
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="project-card">
+
+                    <div class="project-top">
+
+                        <h3>
+
+                            CRM Modernization
+
+                        </h3>
+
+                        <span class="status-badge">
+
+                            Review
+
+                        </span>
+
+                    </div>
+
+                    <p>
+
+                        Consultant:
+                        Emma Watson
+
+                    </p>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            style="width:92%">
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-footer">
+
+                        <span>
+
+                            92% Complete
+
+                        </span>
+
+                        <span>
+
+                            Due: May 2026
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+            <div class="project-list">
+
+                <div class="project-item">
+
+                    <h3>
+
+                        Digital Transformation
+
+                    </h3>
+
+                    <p>
+
+                        Progress 80%
+
+                    </p>
+
+                </div>
+
+                <div class="project-item">
+
+                    <h3>
+
+                        Analytics Platform
+
+                    </h3>
+
+                    <p>
+
+                        Progress 65%
+
+                    </p>
+
+                </div>
+
+                <div class="project-item">
+
+                    <h3>
+
+                        CRM Modernization
+
+                    </h3>
+
+                    <p>
+
+                        Progress 45%
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section
+            id="profile-section"
+            class="dashboard-section hidden">
+
+            <div class="profile-card">
+
+                <h2>
+
+                    Profile Information
+
+                </h2>
+
+                <div class="profile-info">
+
+                    <p>
+
+                        User:
+                        <span
+                        class="profile-name">
+
+                        </span>
+
+                    </p>
+
+                    <p>
+
+                        Role:
+                        <span
+                        class="profile-role">
+
+                        </span>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="client-dashboard.js"></script>
+</body>
+</html>
