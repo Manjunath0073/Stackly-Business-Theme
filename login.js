@@ -219,7 +219,7 @@ if(loginForm){
         if(role === "client"){
 
             window.location.href =
-            "dashboard.html";
+            "client-dashboard.html";
 
         }
 
