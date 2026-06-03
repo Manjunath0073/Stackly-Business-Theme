@@ -856,6 +856,7 @@ body.menu-open{
 
 .hero {
     min-height: 100vh;
+    margin-top: 60px;
     display: flex;
     align-items: center;
     background:
@@ -870,7 +871,7 @@ body.menu-open{
     grid-template-columns: 1fr 1fr;
     gap:80px;
     gap: 60px;
-    align-items: center;
+
 }
 
 .hero__badge {
@@ -1199,9 +1200,6 @@ body.menu-open{
         grid-template-columns:1fr;
     }
 
-    .hero__dashboard{
-        margin-top:40px;
-    }
 }
 
 @media (max-width:768px){

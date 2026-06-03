@@ -532,3 +532,13 @@ if(password && strengthBar && strengthText){
     });
 
 }
+
+signupForm.addEventListener('submit', (e) => {
+
+    e.preventDefault();
+
+    // Your signup logic
+    window.location.href =
+    'login.html';
+
+});
