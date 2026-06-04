@@ -676,10 +676,22 @@
 
     transition:1.8s ease;
 }
-.success-item.show
+.success-item.healthcare.show
 .success-line::after{
 
-    width:100%;
+    width:42%;
+}
+
+.success-item.manufacturing.show
+.success-line::after{
+
+    width:31%;
+}
+
+.success-item.retail.show
+.success-line::after{
+
+    width:58%;
 }
 .moving-dot{
 
@@ -712,16 +724,50 @@
     animation:
     moveDot 1.8s ease forwards;
 }
-@keyframes moveDot{
+.success-item.healthcare.show
+.moving-dot{
 
-    from{
+    animation:
+    move42 1.8s ease forwards;
+}
 
-        left:0;
-    }
+.success-item.manufacturing.show
+.moving-dot{
+
+    animation:
+    move31 1.8s ease forwards;
+}
+
+.success-item.retail.show
+.moving-dot{
+
+    animation:
+    move58 1.8s ease forwards;
+}
+
+@keyframes move42{
 
     to{
 
-        left:calc(100% - 18px);
+        left:calc(42% - 18px);
+    }
+
+}
+
+@keyframes move31{
+
+    to{
+
+        left:calc(31% - 18px);
+    }
+
+}
+
+@keyframes move58{
+
+    to{
+
+        left:calc(58% - 18px);
     }
 
 }

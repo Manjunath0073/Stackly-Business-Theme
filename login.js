@@ -296,15 +296,14 @@ if (signupForm) {
 
         if(password !== confirmPassword){
 
-            passwordMatch.textContent =
-            "✕ Passwords do not match";
+            passwordError.textContent =
+            "Passwords do not match";
 
-            passwordMatch.style.color =
+            passwordError.style.color =
             "#EF4444";
 
             return;
         }
-
         if(!terms.checked){
 
         termsError.textContent =
@@ -532,13 +531,3 @@ if(password && strengthBar && strengthText){
     });
 
 }
-
-signupForm.addEventListener('submit', (e) => {
-
-    e.preventDefault();
-
-    // Your signup logic
-    window.location.href =
-    'login.html';
-
-});

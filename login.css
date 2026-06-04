@@ -956,3 +956,46 @@
 
     -webkit-text-fill-color:transparent;
 }
+
+.forgot-password{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-top:12px;
+}
+
+.forgot-password a{
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:
+    rgba(20,184,166,.08);
+
+    border:
+    1px solid rgba(20,184,166,.15);
+
+    color:#14B8A6;
+
+    text-decoration:none;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    transition:.3s ease;
+}
+
+.forgot-password a:hover{
+
+    transform:translateY(-2px);
+
+    background:
+    rgba(20,184,166,.15);
+
+    box-shadow:
+    0 8px 20px rgba(20,184,166,.12);
+}
