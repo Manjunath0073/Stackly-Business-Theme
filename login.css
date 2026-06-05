@@ -999,3 +999,17 @@
     box-shadow:
     0 8px 20px rgba(20,184,166,.12);
 }
+
+/* Hide Edge password reveal button */
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear{
+
+    display:none;
+}
+input[type="password"]{
+
+    -webkit-appearance:none;
+
+    appearance:none;
+}

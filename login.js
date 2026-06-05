@@ -531,3 +531,31 @@ if(password && strengthBar && strengthText){
     });
 
 }
+
+
+
+if(password && passwordError){
+
+    password.addEventListener(
+    "input",
+    () => {
+
+        if(password.value.length < 8){
+
+            passwordError.textContent =
+            "Password must be at least 8 characters";
+
+            passwordError.style.color =
+            "#EF4444";
+
+        }
+
+        else{
+
+            passwordError.textContent = "";
+
+        }
+
+    });
+
+}
